@@ -6,9 +6,12 @@
 
 
 import UIKit
-
+import Firebase
+import SVProgressHUD
 
 class LogInViewController: UIViewController {
+    
+    let generator = UIImpactFeedbackGenerator(style: .heavy)
 
     //Textfields pre-linked with IBOutlets
     @IBOutlet var emailTextfield: UITextField!
@@ -25,10 +28,17 @@ class LogInViewController: UIViewController {
 
    
     @IBAction func logInPressed(_ sender: AnyObject) {
-
-        
-        //TODO: Log in the user
-        
+        SVProgressHUD.show()
+        Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+            if error != nil {
+                print(error!)
+            }
+            else {
+                self.generator.impactOccurred()
+                SVProgressHUD.dismiss()
+                self.performSegue(withIdentifier: "goToChat", sender: self)
+            }
+        }
         
     }
     

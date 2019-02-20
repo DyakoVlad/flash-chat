@@ -7,7 +7,12 @@
 class Message {
     
     //TODO: Messages need a messageBody and a sender variable
+    var sender: String = ""
+    var messageBody: String = ""
     
-    
+    init(whoSent: String, text: String) {
+        sender = whoSent
+        messageBody = text
+    }
     
 }

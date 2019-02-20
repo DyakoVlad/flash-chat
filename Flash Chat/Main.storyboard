@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="8Ny-HH-lhf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="8Ny-HH-lhf">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,8 +14,8 @@
             <objects>
                 <viewController storyboardIdentifier="welcomeVC" id="w26-XG-9cC" customClass="WelcomeViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cQy-VU-q98"/>
-                        <viewControllerLayoutGuide type="bottom" id="9mT-Oj-xlJ"/>
+                        <viewControllerLayoutGuide type="top" id="eCw-cu-YaK"/>
+                        <viewControllerLayoutGuide type="bottom" id="bhF-4f-xmS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9g1-SA-C5Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -31,6 +31,9 @@
                                     <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xYK-ej-9R9" kind="push" identifier="goToLogin" id="6XL-5h-Q1Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWY-w2-6La">
                                 <rect key="frame" x="0.0" y="688" width="375" height="45"/>
@@ -55,7 +58,7 @@
                             <constraint firstItem="rV4-Sa-2Rb" firstAttribute="top" secondItem="uWY-w2-6La" secondAttribute="bottom" id="1cv-Bu-g2K"/>
                             <constraint firstAttribute="trailing" secondItem="rV4-Sa-2Rb" secondAttribute="trailing" id="6x0-yA-ofE"/>
                             <constraint firstAttribute="trailing" secondItem="uWY-w2-6La" secondAttribute="trailing" id="CAj-Ps-fV4"/>
-                            <constraint firstItem="9mT-Oj-xlJ" firstAttribute="top" secondItem="rV4-Sa-2Rb" secondAttribute="bottom" id="RCs-FN-g8d"/>
+                            <constraint firstItem="bhF-4f-xmS" firstAttribute="top" secondItem="rV4-Sa-2Rb" secondAttribute="bottom" id="RCs-FN-g8d"/>
                             <constraint firstItem="wWy-sR-rfK" firstAttribute="top" secondItem="9g1-SA-C5Y" secondAttribute="top" id="U9z-6l-1Jl"/>
                             <constraint firstItem="uWY-w2-6La" firstAttribute="top" secondItem="wWy-sR-rfK" secondAttribute="bottom" id="UPK-9T-1bw"/>
                             <constraint firstItem="uWY-w2-6La" firstAttribute="leading" secondItem="9g1-SA-C5Y" secondAttribute="leading" id="X4I-Wn-xdH"/>
@@ -79,8 +82,8 @@
             <objects>
                 <viewController storyboardIdentifier="registrationVC" id="qQg-wA-Esh" customClass="RegisterViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jB2-UX-7gJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="uQv-zc-UpP"/>
+                        <viewControllerLayoutGuide type="top" id="d0y-AP-7VW"/>
+                        <viewControllerLayoutGuide type="bottom" id="9wH-wn-NX1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="15o-yi-McO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -98,7 +101,7 @@
                                             <constraint firstAttribute="height" constant="30" id="XuY-dJ-oiY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-Xx-USU">
                                         <rect key="frame" x="16" y="127" width="343" height="30"/>
@@ -106,7 +109,7 @@
                                             <constraint firstAttribute="height" constant="30" id="t4i-pt-0WT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67C-Ey-AV3">
                                         <rect key="frame" x="16" y="165" width="343" height="30"/>
@@ -144,11 +147,11 @@
                         <constraints>
                             <constraint firstItem="PfL-jt-q3u" firstAttribute="leading" secondItem="15o-yi-McO" secondAttribute="leading" id="1IJ-ss-oVE"/>
                             <constraint firstAttribute="bottom" secondItem="PfL-jt-q3u" secondAttribute="bottom" id="8vz-Tc-ydj"/>
-                            <constraint firstItem="PfL-jt-q3u" firstAttribute="top" secondItem="jB2-UX-7gJ" secondAttribute="bottom" id="CFC-YW-6Fr"/>
+                            <constraint firstItem="PfL-jt-q3u" firstAttribute="top" secondItem="d0y-AP-7VW" secondAttribute="bottom" id="CFC-YW-6Fr"/>
                             <constraint firstAttribute="trailing" secondItem="PfL-jt-q3u" secondAttribute="trailing" id="SCF-4t-ZNc"/>
                             <constraint firstAttribute="trailing" secondItem="ffX-Mv-79o" secondAttribute="trailing" id="kgT-Qa-grC"/>
                             <constraint firstItem="ffX-Mv-79o" firstAttribute="leading" secondItem="15o-yi-McO" secondAttribute="leading" id="sbF-0K-BT9"/>
-                            <constraint firstItem="ffX-Mv-79o" firstAttribute="top" secondItem="jB2-UX-7gJ" secondAttribute="bottom" id="vgU-zh-VhL"/>
+                            <constraint firstItem="ffX-Mv-79o" firstAttribute="top" secondItem="d0y-AP-7VW" secondAttribute="bottom" id="vgU-zh-VhL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="IBw-Pb-pcT"/>
@@ -167,8 +170,8 @@
             <objects>
                 <viewController storyboardIdentifier="logInVC" id="xYK-ej-9R9" customClass="LogInViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fxq-LK-1OE"/>
-                        <viewControllerLayoutGuide type="bottom" id="G8E-r3-c8B"/>
+                        <viewControllerLayoutGuide type="top" id="XjI-Lg-Hg7"/>
+                        <viewControllerLayoutGuide type="bottom" id="tsR-xB-7Yi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b1r-c3-eoq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -183,7 +186,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zuQ-XP-4Q7">
                                         <rect key="frame" x="16" y="126" width="343" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD6-NY-DlK">
                                         <rect key="frame" x="16" y="164" width="343" height="30"/>
@@ -199,7 +202,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWF-xv-G1L">
                                         <rect key="frame" x="16" y="88" width="343" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -219,13 +222,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Cr0-Ts-jsg" firstAttribute="top" secondItem="fxq-LK-1OE" secondAttribute="bottom" id="NbT-rd-KUc"/>
+                            <constraint firstItem="Cr0-Ts-jsg" firstAttribute="top" secondItem="XjI-Lg-Hg7" secondAttribute="bottom" id="NbT-rd-KUc"/>
                             <constraint firstAttribute="trailing" secondItem="Cr0-Ts-jsg" secondAttribute="trailing" id="TPw-ya-U3Y"/>
                             <constraint firstAttribute="bottom" secondItem="ns8-Hj-HXi" secondAttribute="bottom" id="WT2-Gx-Man"/>
                             <constraint firstItem="Cr0-Ts-jsg" firstAttribute="leading" secondItem="b1r-c3-eoq" secondAttribute="leading" id="erC-tY-VdK"/>
                             <constraint firstAttribute="trailing" secondItem="ns8-Hj-HXi" secondAttribute="trailing" id="le5-9Z-DI3"/>
                             <constraint firstItem="ns8-Hj-HXi" firstAttribute="leading" secondItem="b1r-c3-eoq" secondAttribute="leading" id="luA-TN-7hs"/>
-                            <constraint firstItem="ns8-Hj-HXi" firstAttribute="top" secondItem="fxq-LK-1OE" secondAttribute="bottom" id="ooS-RL-joJ"/>
+                            <constraint firstItem="ns8-Hj-HXi" firstAttribute="top" secondItem="XjI-Lg-Hg7" secondAttribute="bottom" id="ooS-RL-joJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="GCy-uw-FP0"/>
@@ -245,8 +248,8 @@
             <objects>
                 <viewController storyboardIdentifier="chatVC" id="vXZ-lx-hvc" customClass="ChatViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="76r-aq-Q5l"/>
+                        <viewControllerLayoutGuide type="bottom" id="sZ1-I5-bhx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" userLabel="Background">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -302,8 +305,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WpY-IA-acB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="893-Zp-giU"/>
-                            <constraint firstItem="7eI-kw-TVm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="AAq-UW-DJb"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WpY-IA-acB" secondAttribute="bottom" id="DDc-aL-BrB"/>
+                            <constraint firstItem="7eI-kw-TVm" firstAttribute="top" secondItem="76r-aq-Q5l" secondAttribute="bottom" id="AAq-UW-DJb"/>
+                            <constraint firstItem="sZ1-I5-bhx" firstAttribute="top" secondItem="WpY-IA-acB" secondAttribute="bottom" id="DDc-aL-BrB"/>
                             <constraint firstItem="7eI-kw-TVm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Hlv-uC-xq8"/>
                             <constraint firstItem="WpY-IA-acB" firstAttribute="top" secondItem="7eI-kw-TVm" secondAttribute="bottom" id="mY4-TT-Oje"/>
                             <constraint firstAttribute="trailing" secondItem="WpY-IA-acB" secondAttribute="trailing" id="sS0-jJ-zn7"/>
@@ -327,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="10.794602698650676"/>
+            <point key="canvasLocation" x="1887.2" y="10.344827586206897"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGX-IT-aXC">
